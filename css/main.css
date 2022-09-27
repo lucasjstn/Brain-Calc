@@ -11,15 +11,27 @@ header {
   align-items: center;
   /* justify-content: center; */
   background-color: #395268;
-  width: 100%;
+  width: 100vw;
   height: 4rem;
 }
-
+#output-box {
+  position: relative;
+  font-size: 40px;
+  border: 2px solid #a9b2b9;
+  border-radius: 15px;
+  color: black;
+  padding: 0px 10px 0px 0px;
+  /* background-color: red; */
+  /* top right bottom left */
+  width: 757px;
+  height: 91px;
+  margin: 20px 0px 0px 0px;
+}
 .hamburger {
   /* display: flex; */
   position: fixed;
 
-  left: 80%;
+  left: 94%;
   cursor: pointer;
 }
 
@@ -35,14 +47,33 @@ header {
 
 .mainwrapper {
   display: flex;
-  height: 40rem;
-  align-items: center;
-  /* background-color: blue; */
+  height: 100vh;
+  /* align-items: center; */
+  background-color: blue;
   flex: 1;
   justify-content: center;
 }
-.container {
-  width: 50rem;
-  height: 30rem;
-  background-color: grey;
+
+.buttons-container {
+  display: flex;
+}
+
+.main-button-container {
+  position: relative;
+  width: 550px;
+  height: 350px;
+  background-color: black;
+  border-radius: 20px;
+  /* top right bottom left */
+  margin: 10px 0px 0px 0px;
+}
+
+.side-buttons-container {
+  position: relative;
+  width: 209px;
+  height: 350px;
+  background-color: black;
+  border-radius: 20px;
+  /* top right bottom left */
+  margin: 10px 0px 0px 10px;
 }
