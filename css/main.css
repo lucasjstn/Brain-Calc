@@ -24,7 +24,7 @@ header {
   padding: 0px 10px 0px 0px;
   /* background-color: red; */
   /* top right bottom left */
-  width: 757px;
+  width: 750px;
   height: 91px;
   margin: 20px 0px 0px 0px;
 }
@@ -56,31 +56,33 @@ header {
 
 .buttons-container {
   display: flex;
-  
+  /* background-color: black; */
+  width: 750px;
 }
 
 .main-buttons-container {
-
   position: relative;
   align-items: center;
   justify-content: center;
   width: 550px;
   /* height: 50px; */
-  border: 1px solid black;
+  /* border: 1px solid black; */
   /* background-color: black; */
   border-radius: 20px;
   /* top right bottom left */
-  margin: 10px 0px 0px 0px;
+  margin: 5px 0px 0px 0px;
 }
 
 .side-buttons-container {
   /* position: relative; */
-  width: 200px;
-  /* height: 350px; */
-  background-color: black;
+  display: flex;
+  justify-content: center;
+  width: 170px;
+  /* height: 400px; */
+  background-color: #395268;
   border-radius: 20px;
   /* top right bottom left */
-  margin: 10px 0px 0px 10px;
+  margin: 15px 0px 0px 30px;
 }
 .row-of-buttons {
   position: relative;
@@ -88,21 +90,33 @@ header {
   display: flex;
   flex-direction: row;
 }
-
-.button {
-  width: 134px;
+.side-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 64px;
   height: 62px;
   margin: 12px 8px 10px 8px;
   border-radius: 10px;
-  background-color:#A9B2B9;
+  background-color: white;
+}
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 144px;
+  height: 72px;;
+  margin: 12px 8px 10px 8px;
+  border-radius: 10px;
+  background-color: #a9b2b9;
 }
 
-#digit{
-  width: 134px;
-  height: 62px;
+#digit {
+  width: 144px;
+  height: 72px;;
   margin: 12px 8px 10px 8px;
   border-radius: 10px;
-  background-color: #D4DEE7;
+  background-color: #d4dee7;
 }
 
 .button:hover {
