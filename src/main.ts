@@ -1,5 +1,18 @@
-let array: [string, number];
+function checkStatus(status: number) {
+  switch (status) {
+    case 1:
+      console.log("is admin");
+      break;
+    case 2:
+      console.log("is editor");
+      break;
+    case 3:
+      console.log("is user");
+      break;
 
-array.push("323");
+    default:
+      break;
+  }
+}
 
-console.log(array);
+checkStatus(3);

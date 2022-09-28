@@ -1,4 +1,17 @@
 "use strict";
-let array;
-array.push("323");
-console.log(array);
+function checkStatus(status) {
+    switch (status) {
+        case 1:
+            console.log("is admin");
+            break;
+        case 2:
+            console.log("is editor");
+            break;
+        case 3:
+            console.log("is user");
+            break;
+        default:
+            break;
+    }
+}
+checkStatus(3);
