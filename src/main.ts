@@ -1,1 +1,1 @@
-let data = ["alexandre", 23, false];
+let data: Array<string> = ["aldlasdla", 23];
