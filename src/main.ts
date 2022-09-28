@@ -1,10 +1,9 @@
-// correct form of using union pipe in arrays
-let array: (number | string)[];
+let person: object; 
+//if i declare person like that it will allow i lately assign an empty array to this object this is not good
+person = {
+  name: "Lucas",
+  age: 23,
+};
 
-array = ["lucas", 394];
-
-array.push("lucas");
-console.log(array);
-
-array.push(true);
-//it will generate an js file but ts file will complain
+person = [];
+console.log(person);
