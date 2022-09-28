@@ -1,17 +1,23 @@
 "use strict";
+var UserState;
+(function (UserState) {
+    UserState[UserState["Admin"] = 1] = "Admin";
+    UserState[UserState["Editor"] = 2] = "Editor";
+    UserState[UserState["User"] = 3] = "User";
+})(UserState || (UserState = {}));
 function checkStatus(status) {
     switch (status) {
-        case 1:
+        case UserState.Admin:
             console.log("is admin");
             break;
-        case 2:
+        case UserState.Editor:
             console.log("is editor");
             break;
-        case 3:
+        case UserState.User:
             console.log("is user");
             break;
         default:
             break;
     }
 }
-checkStatus(3);
+checkStatus(2);

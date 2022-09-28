@@ -1,12 +1,18 @@
+enum UserState {
+  Admin = 1,
+  Editor = 2,
+  User = 3,
+}
+
 function checkStatus(status: number) {
   switch (status) {
-    case 1:
+    case UserState.Admin:
       console.log("is admin");
       break;
-    case 2:
+    case UserState.Editor:
       console.log("is editor");
       break;
-    case 3:
+    case UserState.User:
       console.log("is user");
       break;
 
@@ -15,4 +21,4 @@ function checkStatus(status: number) {
   }
 }
 
-checkStatus(3);
+checkStatus(2);
