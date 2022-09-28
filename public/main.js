@@ -1,2 +1,5 @@
 "use strict";
-let data = ["aldlasdla", 23];
+//using tuples
+let array;
+array = [293, "aksdk"];
+console.log(array);

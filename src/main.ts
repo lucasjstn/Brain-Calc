@@ -1,1 +1,6 @@
-let data: Array<string> = ["aldlasdla", 23];
+//using tuples
+let array: [number, string];
+
+array = [293, "aksdk"];
+
+console.log(array);
