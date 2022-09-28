@@ -1,8 +1,9 @@
 "use strict";
-// correct form of using union pipe in arrays
-let array;
-array = ["lucas", 394];
-array.push("lucas");
-console.log(array);
-array.push(true);
-//it will generate an js file but ts file will complain
+let person;
+//this is the right way to initialize an object using typescript
+person = {
+    name: "Lucas",
+    age: 23,
+};
+person = [];
+console.log(person);

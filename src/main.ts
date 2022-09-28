@@ -1,5 +1,8 @@
-let person: object; 
-//if i declare person like that it will allow i lately assign an empty array to this object this is not good
+let person: {
+  name: string;
+  age: number;
+};
+//this is the right way to initialize an object using typescript
 person = {
   name: "Lucas",
   age: 23,
