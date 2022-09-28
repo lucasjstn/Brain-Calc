@@ -1,5 +1,3 @@
 "use strict";
-let myUnionPipe = "Lucas";
-console.log(myUnionPipe);
-myUnionPipe = 203;
-console.log(myUnionPipe);
+// correct form of using union pipe in arrays
+let array = ["lucas", 394];
