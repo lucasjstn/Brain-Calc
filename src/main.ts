@@ -1,9 +1,10 @@
-//using tuples
-let array: [number, string];
+//array of tuples
+let array: [string, number][];
 
-array = [293, "aksdk"];
+array = [
+  ["string", 39283],
+  ["another string", 23],
+];
 
-console.log("First console", array);
 
-//intentional error
-array = [239, "aksdkasd", "extra element"];
+console.log(array);

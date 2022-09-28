@@ -1,7 +1,8 @@
 "use strict";
-//using tuples
+//array of tuples
 let array;
-array = [293, "aksdk"];
-console.log("First console", array);
-//intentional error
-array = [239, "aksdkasd", "extra element"];
+array = [
+    ["string", 39283],
+    ["another string", 23],
+];
+console.log(array);
