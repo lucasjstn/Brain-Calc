@@ -1,6 +1,7 @@
-let person: (string | number)[] = [];
-let number: number = 29;
+let myUnionPipe: number | string = "Lucas";
 
-person = ["Lucas", number];
+console.log(myUnionPipe);
 
-console.log(person);
+myUnionPipe = 203;
+
+console.log(myUnionPipe);

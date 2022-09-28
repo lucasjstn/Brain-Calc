@@ -1,5 +1,5 @@
 "use strict";
-let person = [];
-let number = 29;
-person = ["Lucas", number];
-console.log(person);
+let myUnionPipe = "Lucas";
+console.log(myUnionPipe);
+myUnionPipe = 203;
+console.log(myUnionPipe);
