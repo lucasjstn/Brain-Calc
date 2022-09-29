@@ -3,7 +3,7 @@ const display: any = document.getElementById("display"); //declared as any to ge
 console.log(display);
 
 function writeOnDisplay(item?: string) {
-  display.value = item + display.value;
+  display.value = item + display.value; //inverting the display order because it's buggy by default
 }
 
 function clearDisplay() {
