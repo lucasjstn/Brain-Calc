@@ -15,7 +15,7 @@ header {
   width: 100vw;
   height: 4rem;
 }
-#output-box {
+#display {
   position: relative;
   font-size: 40px;
   border: 2px solid #a9b2b9;

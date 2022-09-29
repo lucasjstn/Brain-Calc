@@ -1,24 +1,11 @@
-enum UserState {
-  Admin = 1,
-  Editor = 2,
-  User = 3,
+let oneButton = document.getElementsByName("one-button").values;
+let display = document.getElementById("output-box");
+let buttons = document.getElementsByTagName("button")[1].getAttribute("id");
+
+console.log(buttons);
+
+function fn() {
+  let display = document.getElementById("display");
+  display.value = "()";
+  console.log(display?.value);
 }
-
-function checkStatus(status: number) {
-  switch (status) {
-    case UserState.Admin:
-      console.log("is admin");
-      break;
-    case UserState.Editor:
-      console.log("is editor");
-      break;
-    case UserState.User:
-      console.log("is user");
-      break;
-
-    default:
-      break;
-  }
-}
-
-checkStatus(2);

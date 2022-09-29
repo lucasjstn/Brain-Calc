@@ -1,23 +1,10 @@
 "use strict";
-var UserState;
-(function (UserState) {
-    UserState[UserState["Admin"] = 1] = "Admin";
-    UserState[UserState["Editor"] = 2] = "Editor";
-    UserState[UserState["User"] = 3] = "User";
-})(UserState || (UserState = {}));
-function checkStatus(status) {
-    switch (status) {
-        case UserState.Admin:
-            console.log("is admin");
-            break;
-        case UserState.Editor:
-            console.log("is editor");
-            break;
-        case UserState.User:
-            console.log("is user");
-            break;
-        default:
-            break;
-    }
+let oneButton = document.getElementsByName("one-button").values;
+let display = document.getElementById("output-box");
+let buttons = document.getElementsByTagName("button")[1].getAttribute("id");
+console.log(buttons);
+function fn() {
+    let display = document.getElementById("display");
+    display.value = "()";
+    console.log(display === null || display === void 0 ? void 0 : display.value);
 }
-checkStatus(2);
