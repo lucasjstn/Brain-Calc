@@ -4,12 +4,18 @@ let oneButton = document.getElementsByName("one-button").values;
 let buttons = document.getElementsByTagName("button")[1].getAttribute("id");
 const display = document.getElementById("display");
 const mantica = display.value;
-console.log(buttons);
+let arrayOfValues = [];
+// console.log(buttons);
 function fn(num) {
     display.value = num + display.value;
-    let arrayOfValues = display.value.split("");
-    console.log(arrayOfValues);
-    console.log(display.value);
+    arrayOfValues = display.value.split("");
+    // console.log(arrayOfValues.reverse()  );
+    // console.log(arrayOfValues.join(""));
+    // console.log(display.value);
+}
+function calc() {
+    let array = arrayOfValues.toString();
+    console.log(array.split('+'));
 }
 function clearDisplay() {
     if (display.value) {
