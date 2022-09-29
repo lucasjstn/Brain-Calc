@@ -1,31 +1,32 @@
 "use strict";
-const display = document.getElementById("display"); //declared as any to get rid of the error alert
-var MathSymbols;
-(function (MathSymbols) {
-    MathSymbols["ADDITTION"] = "+";
-    MathSymbols["SUBTRACTION"] = "-";
-    MathSymbols["PRODUCT"] = "*";
-    MathSymbols["QUOCIENT"] = "/";
-})(MathSymbols || (MathSymbols = {}));
-let arrayOfValues = []; //declaring this array of string to receive further the items unraveled by the split method
-function writeOnDisplay(item) {
-    display.value = item + display.value; //inverting the display order because it's buggy by default
-    arrayOfValues = display.value.split("").reverse(); // spliting display.value in an array, after reversing it and then joining them |> older comment: values = [32+32+12] after ["3", "2", "+", "3", "2", "1", "2"]
+let oneButton = document.getElementsByName("one-button").values;
+// let display = document.getElementById("output-box");
+let buttons = document.getElementsByTagName("button")[1].getAttribute("id");
+const display = document.getElementById("display");
+const mantica = display.value;
+let arrayOfValues = [];
+// console.log(buttons);
+//this functions reveives a string and sums it to the display content and then
+function writeOnDisplay(num) {
+    display.value = num + display.value;
+    arrayOfValues = display.value.split("");
 }
 function writeResultOnDisplay() {
-    let array = arrayOfValues.join("").split(""); //creating an array again dont know why
-    let indexOfAddition = array.indexOf("-");
-    console.log("index of indexOfAddition: ", indexOfAddition);
-    // console.log(array);
-    // console.log("index of the plus sign: ", array.indexOf("+")); //if not found returns -1
-    // console.log(arrayOfValues.join("").split("+"));
-    // console.log(array.length);
-    console.log(array); // [ "3", "0", "+", "1", "0" ]
-    console.log("getting the item before the first plus sign", array.slice(0, indexOfAddition).join("")); // [ "3", "0" ], after join |> '30 //[ "1", "0", "0", "+", "2", "2", "2" ] => '100'
-    console.log("getting the item after the first plus sign", array.slice(indexOfAddition + 1, array.length).join(""));
-    // console.log(arrayOfValues);
+    let array = arrayOfValues.reverse().join("");
+    let arrayCutted = array.split("+");
+    let last = 0;
+    for (let i = 0; i < arrayCutted.length; i++) {
+        // console.log(parseInt(arrayCutted[i]));
+        last += parseInt(arrayCutted[i]);
+    }
+    const result = last.toString().split("");
+    console.log(result.join(""));
+    display.value = result.reverse().join("");
+    // console.log("tamanho da array:", arrayCutted.length);
+    // console.log(array.split("+"));
 }
 function clearDisplay() {
-    //function to,
-    display.value = "";
+    if (display.value) {
+        display.value = "";
+    }
 }
