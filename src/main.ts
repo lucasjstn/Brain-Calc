@@ -23,8 +23,8 @@ function calc() {
   }
 
   const result: string[] = last.toString().split("");
-  console.log(typeof result.reverse().join(""));
-  display.value = result.reverse();
+  console.log(result.join(""));
+  display.value = result.reverse().join("");
   // console.log("tamanho da array:", arrayCutted.length);
 
   // console.log(array.split("+"));

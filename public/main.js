@@ -20,8 +20,8 @@ function calc() {
         last += parseInt(arrayCutted[i]);
     }
     const result = last.toString().split("");
-    console.log(typeof result.reverse().join(""));
-    display.value = result.reverse();
+    console.log(result.join(""));
+    display.value = result.reverse().join("");
     // console.log("tamanho da array:", arrayCutted.length);
     // console.log(array.split("+"));
 }
