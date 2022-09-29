@@ -1,10 +1,18 @@
 "use strict";
 let oneButton = document.getElementsByName("one-button").values;
-let display = document.getElementById("output-box");
+// let display = document.getElementById("output-box");
 let buttons = document.getElementsByTagName("button")[1].getAttribute("id");
+const display = document.getElementById("display");
+const mantica = display.value;
 console.log(buttons);
-function fn() {
-    let display = document.getElementById("display");
-    display.value = "()";
-    console.log(display === null || display === void 0 ? void 0 : display.value);
+function fn(num) {
+    display.value = num + display.value;
+    let arrayOfValues = display.value.split("");
+    console.log(arrayOfValues);
+    console.log(display.value);
+}
+function clearDisplay() {
+    if (display.value) {
+        display.value = "";
+    }
 }

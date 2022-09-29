@@ -23,50 +23,48 @@
     <div class="mainwrapper">
       <div class="content-container">
         <input
+        
           type="text"
-          disabled
           selectionDirection="backward"
-          dir="rtl"
           placeholder="0"
           id="display"
-          value="1203"
         />
-
+        <div><p>aksdkasdkas</p></div>
         <section class="buttons-container">
           <div class="main-buttons-container">
             <div class="row-of-buttons">
-              <button onclick="fn()" class="button" id="parenthesis">( )</button>
-              <button class="button" id="percentage">%</button>
-              <button class="button" id="quocient">÷</button>
-              <button class="button" id="multiplication">×</button>
+              <button onclick="fn(')')" value="" class="button" id="parenthesis">( )</button>
+              <button onclick="fn('%')" class="button" id="percentage">%</button>
+              <button onclick="fn('÷')" class="button" id="quocient">÷</button>
+              <button onclick="fn('*')" class="button" id="multiplication">×</button>
             </div>
 
             <div class="row-of-buttons">
-              <button class="button" id="digit">7</button>
-              <button class="button" id="digit">8</button>
-              <button class="button" id="digit">9</button>
-              <button class="button" id="subtraction">-</button>
+              <button onclick="fn('7')" class="button" id="digit">7</button>
+              <button onclick="fn('8')" class="button" id="digit">8</button>
+              <button onclick="fn('9')" class="button" id="digit">9</button>
+              <button onclick="fn('-')" class="button" id="subtraction">-</button>
             </div>
 
             <div class="row-of-buttons">
-              <button class="button" id="digit">4</button>
-              <button class="button" id="digit">5</button>
-              <button class="button" id="digit">6</button>
-              <button class="button" id="addition">+</button>
+              <button onclick="fn('4')" class="button" id="digit">4</button>
+              <button onclick="fn('5')" class="button" id="digit">5</button>
+              <button onclick="fn('6')" class="button" id="digit">6</button>
+              <button onclick="fn('+')" class="button" id="addition">+</button>
             </div>
 
             <div class="row-of-buttons">
-              <button class="button" id="digit" name="one-button">1</button>
-              <button class="button" id="digit">2</button>
-              <button class="button" id="digit">3</button>
-              <button class="button" id="square-root">√</button>
+              <button onclick="fn('1')" class="button" id="digit" name="one-button">1</button>
+              <button onclick="fn('2')" class="button" id="digit">2</button>
+              <button onclick="fn('3')" class="button" id="digit">3</button>
+              <button onclick="fn(')')" class="button" id="square-root">√</button>
             </div>
             
             <div class="row-of-buttons">
-              <button class="button" id="digit">0</button>
-              <button class="button" id="digit">.</button>
-              <button class="button" id="digit">=</button>
-              <button class="button" id="delete">AC</button>
+              <button onclick="fn(0)" class="button" id="digit">0</button>
+              <button onclick="fn('.')" class="button" id="digit">.</button>
+              <button onclick="fn('=')" class="button" id="digit">=</button>
+              <button onclick="clearDisplay()" class="button" onclick="clearDisplay()" id="delete">AC</button>
             </div>
           </div>
           <div class="side-buttons-container">
@@ -81,7 +79,7 @@
             </div>
             <div class="row-side-buttons">
 
-              <button  class="side-buttons">in</button>
+              <button class="side-buttons">in</button>
               <button class="side-buttons">cos</button>
               <button class="side-buttons">log</button>
               <button class="side-buttons">e</button>

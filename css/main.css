@@ -16,6 +16,8 @@ header {
   height: 4rem;
 }
 #display {
+  direction: rtl;
+  unicode-bidi: bidi-override;
   position: relative;
   font-size: 40px;
   border: 2px solid #a9b2b9;
@@ -31,7 +33,6 @@ header {
 .hamburger {
   /* display: flex; */
   position: fixed;
-
   left: 94%;
   cursor: pointer;
 }
