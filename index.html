@@ -35,7 +35,7 @@
       writeOnDisplay('01+03')
       " value="10+20+30" class="buttonClear" id="">10+30</button>
 
-      <button class="buttonClear" onclick="calc()">fast equals</button>
+      <button class="buttonClear" onclick="writeResultOnDisplay()">fast equals</button>
       </div>
 
     <div class="mainwrapper">
@@ -82,7 +82,7 @@
             <div class="row-of-buttons">
               <button onclick="writeOnDisplay(0)" class="button" id="digit">0</button>
               <button onclick="writeOnDisplay('.')" class="button" id="digit">.</button>
-              <button onclick="calc()" class="button" id="digit">=</button>
+              <button onclick="writeResultOnDisplay()" class="button" id="digit">=</button>
               <button onclick="clearDisplay()" class="button" onclick="clearDisplay()" id="delete">AC</button>
             </div>
           </div>
