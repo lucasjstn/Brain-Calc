@@ -19,7 +19,24 @@
         <span class="bar"></span>
       </div>
     </header>
-    <button onclick="console.clear(); clearDisplay()" value="clear" class="buttonClear" id="">clear</button>
+    <!-- botao pra limpar tela e console -->
+    <div class="helper" style="display: flex; flex-direction: row; width: 40%;">
+      <button onclick="console.clear(); clearDisplay()" value="clear" class="buttonClear" id="">clear</button>
+      <!-- botao pra inserir entrada padrao -->
+      <button onclick=
+      "
+      // it is reversed because on display it will be normal
+        writeOnDisplay('01+02+03')
+      " value="10+20+30" class="buttonClear" id="">10+20+30</button>
+
+      <button onclick=
+      "
+      // it is reversed because on display it will be normal
+      writeOnDisplay('01+03')
+      " value="10+20+30" class="buttonClear" id="">10+30</button>
+
+      <button class="buttonClear" onclick="calc()">fast equals</button>
+      </div>
 
     <div class="mainwrapper">
       <div class="content-container">
@@ -30,40 +47,41 @@
           placeholder="0"
           id="display"
         />
-        <div><p>aksdkasdkas</p></div>
+
+        <div class="error-message"><p>mensagem de erro</p></div>
         <section class="buttons-container">
           <div class="main-buttons-container">
             <div class="row-of-buttons">
-              <button onclick="fn(')')" value="" class="button" id="parenthesis">( )</button>
-              <button onclick="fn('%')" class="button" id="percentage">%</button>
-              <button onclick="fn('÷')" class="button" id="quocient">÷</button>
-              <button onclick="fn('*')" class="button" id="multiplication">×</button>
+              <button onclick="writeOnDisplay(')')" value="" class="button" id="parenthesis">( )</button>
+              <button onclick="writeOnDisplay('%')" class="button" id="percentage">%</button>
+              <button onclick="writeOnDisplay('÷')" class="button" id="quocient">÷</button>
+              <button onclick="writeOnDisplay('*')" class="button" id="multiplication">×</button>
             </div>
 
             <div class="row-of-buttons">
-              <button onclick="fn('7')" class="button" id="digit">7</button>
-              <button onclick="fn('8')" class="button" id="digit">8</button>
-              <button onclick="fn('9')" class="button" id="digit">9</button>
-              <button onclick="fn('-')" class="button" id="subtraction">-</button>
+              <button onclick="writeOnDisplay('7')" class="button" id="digit">7</button>
+              <button onclick="writeOnDisplay('8')" class="button" id="digit">8</button>
+              <button onclick="writeOnDisplay('9')" class="button" id="digit">9</button>
+              <button onclick="writeOnDisplay('-')" class="button" id="subtraction">-</button>
             </div>
 
             <div class="row-of-buttons">
-              <button onclick="fn('4')" class="button" id="digit">4</button>
-              <button onclick="fn('5')" class="button" id="digit">5</button>
-              <button onclick="fn('6')" class="button" id="digit">6</button>
-              <button onclick="fn('+')" class="button" id="addition">+</button>
+              <button onclick="writeOnDisplay('4')" class="button" id="digit">4</button>
+              <button onclick="writeOnDisplay('5')" class="button" id="digit">5</button>
+              <button onclick="writeOnDisplay('6')" class="button" id="digit">6</button>
+              <button onclick="writeOnDisplay('+')" class="button" id="addition">+</button>
             </div>
 
             <div class="row-of-buttons">
-              <button onclick="fn('1')" class="button" id="digit" name="one-button">1</button>
-              <button onclick="fn('2')" class="button" id="digit">2</button>
-              <button onclick="fn('3')" class="button" id="digit">3</button>
-              <button onclick="fn(')')" class="button" id="square-root">√</button>
+              <button onclick="writeOnDisplay('1')" class="button" id="digit" name="one-button">1</button>
+              <button onclick="writeOnDisplay('2')" class="button" id="digit">2</button>
+              <button onclick="writeOnDisplay('3')" class="button" id="digit">3</button>
+              <button onclick="writeOnDisplay(')')" class="button" id="square-root">√</button>
             </div>
             
             <div class="row-of-buttons">
-              <button onclick="fn(0)" class="button" id="digit">0</button>
-              <button onclick="fn('.')" class="button" id="digit">.</button>
+              <button onclick="writeOnDisplay(0)" class="button" id="digit">0</button>
+              <button onclick="writeOnDisplay('.')" class="button" id="digit">.</button>
               <button onclick="calc()" class="button" id="digit">=</button>
               <button onclick="clearDisplay()" class="button" onclick="clearDisplay()" id="delete">AC</button>
             </div>
@@ -75,7 +93,7 @@
               <button class="side-buttons">sin</button>
               <button class="side-buttons">tan</button>
               <button class="side-buttons">inv</button>
-              <button class="side-buttons">&#960</button>
+              <button class="side-buttons"> pi </button>
               <button class="side-buttons">!</button>
             </div>
             <div class="row-side-buttons">
@@ -87,12 +105,6 @@
               <button class="side-buttons">x<sup>y</sup></button>
               <button class="side-buttons">^</button>
             </div>
-          </div>
-          </div>
-         
-
-        
-
         </section>
       </div>
     </div>

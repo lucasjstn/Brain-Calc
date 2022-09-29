@@ -6,19 +6,24 @@ const display = document.getElementById("display");
 const mantica = display.value;
 let arrayOfValues = [];
 // console.log(buttons);
-function fn(num) {
+//this functions reveives a string and sums it to the display content and then
+function writeOnDisplay(num) {
     display.value = num + display.value;
     arrayOfValues = display.value.split("");
-    // console.log(arrayOfValues.reverse());
-    // console.log(arrayOfValues.join(""));
-    // console.log(display.value);
 }
 function calc() {
     let array = arrayOfValues.reverse().join("");
     let arrayCutted = array.split("+");
-    const sum1 = parseInt(arrayCutted[0]);
-    console.log(sum1);
-    console.log(array.split("+"));
+    let last = 0;
+    for (let i = 0; i < arrayCutted.length; i++) {
+        // console.log(parseInt(arrayCutted[i]));
+        last += parseInt(arrayCutted[i]);
+    }
+    const result = last.toString().split("");
+    console.log(typeof result.reverse().join(""));
+    display.value = result.reverse();
+    // console.log("tamanho da array:", arrayCutted.length);
+    // console.log(array.split("+"));
 }
 function clearDisplay() {
     if (display.value) {
