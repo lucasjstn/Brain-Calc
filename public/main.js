@@ -9,13 +9,16 @@ let arrayOfValues = [];
 function fn(num) {
     display.value = num + display.value;
     arrayOfValues = display.value.split("");
-    // console.log(arrayOfValues.reverse()  );
+    // console.log(arrayOfValues.reverse());
     // console.log(arrayOfValues.join(""));
     // console.log(display.value);
 }
 function calc() {
-    let array = arrayOfValues.toString();
-    console.log(array.split('+'));
+    let array = arrayOfValues.reverse().join("");
+    let arrayCutted = array.split("+");
+    const sum1 = parseInt(arrayCutted[0]);
+    console.log(sum1);
+    console.log(array.split("+"));
 }
 function clearDisplay() {
     if (display.value) {
