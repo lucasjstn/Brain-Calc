@@ -44,4 +44,54 @@ class Stack {
   }
 }
 
+// o padrão obrigatório será sempre um elemento e logo após um sinal, terminando em um elemento
 const expression = "57/3+5+(9*3)";
+console.log(expression);
+
+// console.log(expression);
+console.log(untangle(expression));
+
+function stacker(element) {
+  let a = new Queue();
+  let b = new Stack();
+  for (let i = 0; i < element.length; i++) {
+    if (isSignal(element[i])) {
+      b.push(element[i]);
+    } else {
+      a.enqueue(element[i]);
+    }
+  }
+
+  return {
+    variables: a.items,
+    operators: b.items,
+  };
+}
+
+console.log(stacker(untangle(expression)));
+
+//verificar se é sinal ou numero
+function isSignal(element) {
+  const pattern = /[*\+\-\/\(\)]/;
+  return pattern.test(element);
+}
+
+//separar tudo
+function untangle(object) {
+  // console.log("untangling");
+  const a = separateVariables(object);
+  const b = cleanWhiteSpaces(a);
+  return b;
+}
+
+//separar as variaveis e sinais em uma array
+function separateVariables(object) {
+  return object.split(/([)(/*+-])/g);
+}
+
+//limpar os espaços em branco que os paranteses deixam
+function cleanWhiteSpaces(object) {
+  return object.filter(function (element) {
+    return element !== "";
+  });
+}
