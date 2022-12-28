@@ -6,19 +6,9 @@ class Queue {
   push(element) {
     this.items.push(element);
   }
-  show() {
-    console.log(this.items);
-  }
-  clean() {
-    this.items = [];
-  }
+
   dequeue() {
     this.items.shift();
-  }
-  printQueue() {
-    for (let i = 0; i < this.items.length; i++) {
-      console.log(this.items[i]);
-    }
   }
 }
 
@@ -32,24 +22,9 @@ class Stack {
   pop() {
     this.items.pop();
   }
-  print() {
-    console.log(this.items);
-  }
 
   peek() {
     return this.items[this.items.length - 1];
-  }
-
-  antipeek() {
-    return this.items[this.items.length - 2];
-  }
-
-  clean() {
-    this.items = [];
-  }
-
-  firstItem() {
-    return this.items[0];
   }
 
   size() {
@@ -57,15 +32,11 @@ class Stack {
   }
 }
 
-// o padrão obrigatório será sempre um elemento e logo após um sinal, terminando em um elemento
 // const expression = "57/3+5+(9*3)";
 // const expression = "(5*4+3*2)-1";
 // const expression = "9*3+8*7";
-// const a = eval(expression);
 // const expression = "";
-// console.log(a);
 // const expression = "(8-1+3)*6-((3+7)*2)";
-// console.log(main);
 
 let output = new Queue();
 let operator = new Stack();
@@ -80,7 +51,6 @@ for (let index = 0; index < main.length; index++) {
   if (!isOperator(main[index]) && main[index] != ")") {
     output.push(main[index]);
   } else if (main[index] == ")") {
-    console.log("dentrodoloop");
     let found = true;
     while (
       operator.items[operator.size() - 1] != "(" &&
