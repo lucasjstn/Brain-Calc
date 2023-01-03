@@ -43,7 +43,7 @@ let operator = new Stack();
 
 // console.log(main.length);
 
-const expression = "(8-1+3)*6-((3+7)*2)^3*";
+const expression = "(8-1+3)*6-((3+7)*2)^3*3";
 const main = untangled(expression);
 // console.log(main);
 
